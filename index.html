@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>PRED-MPPI: Disturbance-Preview and Efficient MPPI for Robust Quadrotor Tracking with Hardware Validation</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">PRED-MPPI: Disturbance-Preview and Efficient MPPI for Robust Quadrotor Tracking with Hardware Validation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+<!--               <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                  </span>
+                  </div> -->
+
+<!--                   <div class="is-size-5 publication-authors">
+                    <span class="author-block">Institution Name<br>Conferance name and year</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                  </div> -->
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <img src="static/images/PRED-MPPI2-1.png" alt="PRED-MPPI">
+          <h2 class="subtitle has-text-centered">
+            PRED-MPPI integrating disturbance preview into MPPI rolling dynamics with variable discretization grids.
+          </h2>
+        </div>
+      <div class="item">
+        <img src="static/images/compare_exp.png" alt="PRED-MPPI 2">
+        <h2 class="subtitle has-text-centered">
+          Comparison between baseline MPPI and the proposed PRED-MPPI under fan-induced wind disturbance.
+        </h2>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+<style>
+#results-carousel img {
+  max-width: 100% !important;  
+  width: 100%;      
+  height: auto;            
+  display: block;
+  margin: 0 auto;
+}
+</style>
+
+  
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p style="font-size: 1.3rem; line-height: 1.6;">
+            We propose PRED-MPPI, the first MPPI variant that seamlessly integrates real-time disturbance preview and adaptive discretization for quadrotor tracking control under significant model inaccuracies and time-varying disturbances. Unlike prior MPPI variants (e.g., L1-MPPI, DA-MPPI), which assume constant or matched disturbances, PRED-MPPI leverages a high order Generalized Extended State Observer for disturbance preview and a Variable Discretization Grid (VDG) to reduce computation and control variance. The synergy enables real-time (50Hz) quadrotor control under time-varying and mismatched disturbances. Extensive comparative simulation and real-world Crazyflie experiments demonstrate substantial performance gains. In AirSim simulation, PRED-MPPI reduces computation time by  over 30%, and mean RMSE by 10.3%, 13.5%, and 14.6% compared to baseline MPPI, and by 2.59%, 3.62%, and 5.80% compared to DA-MPPI across three representative scenarios. In real-world Crazyflie experiment, for ground-effect-disturbed hovering, PRED-MPPI reduces  mean and standard deviation (Std) of X–Y plane error by 14.2%/17.9% and 6.03%/21.6% compared to MPPI and DA-MPPI; for fan-induced wind experiments, PRED-MPPI yields improvements of 23.4%/36.8% and 13.8%/25.0% in RMSE and tracking error Std. These results establish PRED-MPPI as the first disturbance-preview MPPI achieving real-world UAV robustness and efficiency, paving the way for deployment on resource-limited robotic platforms.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Ground-effect-disturbed Hovering Experiments -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Ground-effect-disturbed Hovering Experiments</h2>
+      <div class="video-grid-3">
+        <div class="item">
+          <video autoplay controls muted loop width="100%">
+            <source src="static/videos/hoverPD.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">Geometry PD</p>
+        </div>
+        <div class="item">
+          <video autoplay controls muted loop width="100%">
+            <source src="static/videos/hoverMPPI.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">MPPI</p>
+        </div>
+        <div class="item">
+          <video autoplay controls muted loop width="100%">
+            <source src="static/videos/hoverMPPI_VDG.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">MPPI+VDG</p>
+        </div>
+        <div class="item">
+          <video autoplay controls muted loop width="100%">
+            <source src="static/videos/hoverDA-MPPI.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">DA-MPPI</p>
+        </div>
+        <div class="item">
+          <video autoplay controls muted loop width="100%">
+            <source src="static/videos/hoverDA-MPPI_VDG.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">DA-MPPI+VDG</p>
+        </div>
+        <div class="item">
+          <video autoplay controls muted loop width="100%">
+            <source src="static/videos/hoverPRED-MPPI.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">PRED-MPPI</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- fan-induced wind experiments -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Fan-induced Wind Experiments</h2>
+      <div class="video-grid-2">
+        <div class="item">
+          <video autoplay controls muted loop width="100%">
+            <source src="static/videos/PD.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">Geometry PD</p>
+        </div>
+        <div class="item">
+          <video autoplay controls muted loop width="100%">
+            <source src="static/videos/DA-MPPI.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">DA-MPPI</p>
+        </div>
+        <div class="item">
+          <video autoplay controls muted loop width="100%">
+            <source src="static/videos/MPPI.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">MPPI</p>
+        </div>
+        <div class="item">
+          <video autoplay controls muted loop width="100%">
+            <source src="static/videos/DA-MPPI_VDG.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">DA-MPPI+VDG</p>
+        </div>
+        <div class="item">
+          <video autoplay controls muted loop width="100%">
+            <source src="static/videos/MPPI_VDG.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">MPPI+VDG</p>
+        </div>
+        <div class="item">
+          <video autoplay controls muted loop width="100%">
+            <source src="static/videos/PRED-MPPI.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">PRED-MPPI</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.video-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 三列 */
+  gap: 1rem;
+}
+.video-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 两列 */
+  gap: 1rem;
+}
+.video-grid-3 video,
+.video-grid-2 video {
+  width: 100%;
+  border-radius: 8px;
+}
+</style>
+
+<!-- Results section -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <!-- Common big title -->
+      <h1 class="title is-2">Results</h1>
+      <p class="content">
+          The comparative quantitative results clearly demonstrate the superior performance of the proposed PRED-MPPI in term of computation and tracking performance, through leveraging disturbance preview technique and VDG strategy.
+      </p>
+      <!-- Part 1 -->
+      <h2 class="title is-4 has-text-centered">Simulations</h2>
+      <div id="results-carousel-1" class="carousel results-carousel">
+        <div class="item">
+          <img src="static/images/VDG_valid.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            Average time consumption shows that MPPI leveraging VDG reduces computation time by over 30% thanks to the reduction on the number of sampled control inputs.
+          </h2>
+        </div>
+        <div class="item">
+          <img src="static/images/Statistic_Sim.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            Box plots of RMSE for three typical scenarios. This improvement indicates that integrating VDG in MPPI could plummet the variance of tracking error, stemming from the reduced stochastic noise due to fewer sampled inputs.
+          </h2>
+        </div>
+      </div>
+
+      <!-- Part 2 -->
+      <h2 class="title is-4 has-text-centered">Ground-effect-disturbed Hovering Experiments</h2>
+      <div id="results-carousel-2" class="carousel results-carousel">
+        <div class="item">
+          <img src="static/images/DisGEF.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            Violin plots represent the distance to (0,0) in X-Y plane of the baseline controllers W/WO VDG strategy, demonstrating the VDG strategy is able to reduce both the mean and variance of the X-Y displacement distribution.
+          </h2>
+        </div>
+        <div class="item">
+          <img src="static/images/AltitudeGEF.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+             Disturbance-unaware controllers (e.g., geometry PD, MPPI, and MPPI+VDG) fail to maintain the target altitude at pz = 0.5m due to ground effect and input uncertainties, whereas the disturbance-aware controllers (e.g., DA-MPPI, DA-MPPI+VDG, PRED-MPPI) successfully achieve the target.
+          </h2>
+        </div>
+      </div>
+
+      <!-- Part 3 -->
+      <h2 class="title is-4 has-text-centered">Fan-induced Wind Experiments</h2>
+      <div id="results-carousel-3" class="carousel results-carousel">
+        <div class="item">
+          <img src="static/images/Circle2D.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            Comparative circular trajectory tracking results in X-Y plane under fan-induced time-varying wind disturbances and input uncertainties.
+          </h2>
+        </div>
+        <div class="item">
+          <img src="static/images/Circle3D.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            Comparative circular trajectory tracking results of 6 controller under fan-induced unknown time-varying wind and input uncertainties.
+          </h2>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End Results section -->
+<style>
+.carousel img {
+  max-width: 70%; 
+  height: auto;
+  display: block;
+  margin: 0 auto; 
+  border-radius: 8px; 
+}
+</style>
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code> </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
