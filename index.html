@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>PRED-MPPI: Disturbance-Preview and Efficient MPPI for Robust Quadrotor Tracking with Hardware Validation</title>
+  <title>Fast Integrated Planning and Control under Non-negligible Uncertainties</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -46,55 +46,84 @@
 </head>
 <body>
 
+<style>
+  .section-divider {
+    border: none;
+    height: 4px;
+    background-color: #e0e0e0;
+    margin: 5rem 0 3rem 0;
+  }
+
+  .paper-caption {
+    margin-top: 0.3rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    text-align: left;
+    color: #000;
+  }
+
+  .paper-caption strong {
+    font-weight: 800;
+  }
+
+  .paper-caption em {
+    font-style: italic;
+    
+  }
+  .submission-note {
+  margin-top: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #555;
+  text-align: center;
+}
+
+</style>
 
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">PRED-MPPI: Disturbance-Preview and Efficient MPPI for Robust Quadrotor Tracking with Hardware Validation</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-<!--               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div> -->
 
-<!--                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div> -->
+          <!-- Title -->
+          <h1 class="title is-1 publication-title">
+            Fast Integrated Planning and Control under Non-negligible Uncertainties
+          </h1>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+          <!-- Submission note -->
+          <p class="submission-note">
+            This paper has been submitted to the 2026 Robotics: Science and Systems (RSS)
+          </p>
 
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
+          <!-- Anonymous review note -->
+          <p class="review-note">
+            * All author information is removed due to review policy reasons
+          </p>
+
+          <!-- Buttons -->
+          <div class="publication-links">
+            <span class="link-block">
+              <a href="#" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                <span>Arxiv</span>
+              </a>
+            </span>
+
+            <span class="link-block">
+              <a class="external-link button is-normal is-rounded is-dark
+                        has-tooltip-bottom"
+                title="The code will be released upon acceptance of this work.">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
                 </span>
-
-            </div>
+                <span>Code</span>
+              </a>
+            </span>
           </div>
+
+        </div>
+
         </div>
       </div>
     </div>
@@ -107,23 +136,30 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <img src="static/images/PRED-MPPI2-1.png" alt="PRED-MPPI">
-          <h2 class="subtitle has-text-centered">
-            PRED-MPPI integrating disturbance preview into MPPI rolling dynamics with variable discretization grids.
-          </h2>
-        </div>
-      <div class="item">
-        <img src="static/images/compare_exp.png" alt="PRED-MPPI 2">
-        <h2 class="subtitle has-text-centered">
+        <figure class="paper-figure">
+        <img src="static/images/Overview.png" alt="Overview figure">
+
+        <figcaption class="paper-caption">
+          Fig. 1:
+          <strong>Rethinking hierarchical navigation under non-negligible uncertainties.</strong>
+          <em>Upper:</em> Conventional hierarchical navigation relies on time-parameterized trajectories generated under nominal assumptions, leading to feasibility mismatch and limited disturbance adaptation.
+          <em>Lower:</em> The proposed two-layer architecture integrates trajectory planning and control into a single disturbance-aware optimization layer, directly mapping waypoints to dynamics-level control commands by jointly accounting for estimated disturbances and variable discretization.
+        </figcaption>
+      </figure>
+      <div class="item" style="margin-top: 3rem; text-align: center;">
+        <img src="static/images/table.png" alt="PRED-MPPI table"
+                        style="max-width: 80%; height: auto;">
+        
+        <!-- <h2 class="subtitle has-text-centered">
           Comparison between baseline MPPI and the proposed PRED-MPPI under fan-induced wind disturbance.
-        </h2>
+        </h2> -->
       </div>
   </div>
 </div>
 </div>
 </section>
 <!-- End image carousel -->
+
 <style>
 #results-carousel img {
   max-width: 100% !important;  
@@ -135,24 +171,110 @@
 </style>
 
   
-<!-- Paper abstract -->
+<!-- Abstract & Contributions -->
 <section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-2">Abstract</h2>
-        <div class="content has-text-justified">
-          <p style="font-size: 1.3rem; line-height: 1.6;">
-            We propose PRED-MPPI, the first MPPI variant that seamlessly integrates real-time disturbance preview and adaptive discretization for quadrotor tracking control under significant model inaccuracies and time-varying disturbances. Unlike prior MPPI variants (e.g., L1-MPPI, DA-MPPI), which assume constant or matched disturbances, PRED-MPPI leverages a high order Generalized Extended State Observer for disturbance preview and a Variable Discretization Grid (VDG) to reduce computation and control variance. The synergy enables real-time (50Hz) quadrotor control under time-varying and mismatched disturbances. Extensive comparative simulation and real-world Crazyflie experiments demonstrate substantial performance gains. In AirSim simulation, PRED-MPPI reduces computation time by  over 30%, and mean RMSE by 10.3%, 13.5%, and 14.6% compared to baseline MPPI, and by 2.59%, 3.62%, and 5.80% compared to DA-MPPI across three representative scenarios. In real-world Crazyflie experiment, for ground-effect-disturbed hovering, PRED-MPPI reduces  mean and standard deviation (Std) of X–Y plane error by 14.2%/17.9% and 6.03%/21.6% compared to MPPI and DA-MPPI; for fan-induced wind experiments, PRED-MPPI yields improvements of 23.4%/36.8% and 13.8%/25.0% in RMSE and tracking error Std. These results establish PRED-MPPI as the first disturbance-preview MPPI achieving real-world UAV robustness and efficiency, paving the way for deployment on resource-limited robotic platforms.
+  <div class="container is-fullhd">
+
+    <div class="columns is-variable is-8">
+
+      <!-- Abstract (Left) -->
+      <div class="column is-8">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified" style="font-size: 1.2rem; line-height: 1.65;">
+          <p>
+            Hierarchical navigation systems typically rely on low-level controllers to compensate 
+            for disturbances or modeling uncertainties, while planning decisions are made using simplified 
+            nominal models. Under non-negligible Uncertainties, such separation can lead to dynamically 
+            infeasible motion and degraded closed-loop performance. This paper presents a disturbance-aware 
+            Integrated Trajectory Planner and Controller (ITPC) that explicitly accounts for uncertainties 
+            at the dynamics level. Given only waypoints from arbitrary path planners (e.g., A*, Vision-Language-Action methods), 
+            the proposed framework directly generates control commands by jointly reasoning over full-order system 
+            dynamics with estimated disturbance considering motion progression, without requiring time-parameterized 
+            reference trajectories or predefined velocity profiles. To enable real-time operation on resource-constrained 
+            platforms, we introduce a variable discretization strategy that extends the effective prediction horizon 
+            while maintaining low computational cost. This allows the system to adapt its motion in response to 
+            environmental disturbances rather than tracking a fixed nominal trajectory. Extensive simulations 
+            and hardware experiments demonstrate that ITPC achieves improved robustness and safety compared to 
+            representative hierarchical baselines, while remaining computationally efficient on resource-constrained 
+            platforms with limited CPU-only computational resources. 
           </p>
         </div>
       </div>
+
+      <!-- Contributions (Right) -->
+      <div class="column is-4">
+        <h2 class="title is-3">Contributions</h2>
+        <div class="content" style="font-size: 1.2rem; line-height: 1.65;">
+          <ol>
+            <li>
+              <strong>Disturbance-aware integrated planning and control.</strong>
+              A unified optimization layer directly maps waypoints to control commands
+              under state and disturbance uncertainties.
+            </li>
+            <li>
+              <strong>Computationally efficient long-horizon optimization.</strong>
+              A variable discretization strategy enables real-time performance on
+              resource-constrained platforms.
+            </li>
+            <li>
+              <strong>Extensive real-world validation.</strong>
+              Simulation and hardware experiments demonstrate improved robustness and safety
+              over representative baselines.
+            </li>
+          </ol>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
+<!-- End Abstract & Contributions -->
 
-<!-- Ground-effect-disturbed Hovering Experiments -->
+<section class="section">
+  <div class="container is-fullhd">
+    <h2 class="title is-2 has-text-centered">Methods</h2>
+
+    <div class="columns is-vcentered">
+      
+      <!-- 左：文字 -->
+      <div class="column is-6">
+        <div class="content has-text-justified">
+          <p style="font-size: 1.2rem; line-height: 1.6;">
+            This section presents the proposed ITPC. Rather than introducing independent 
+            algorithmic components, the results are organized to reflect a coherent 
+            progression from disturbance-aware state estimation, through computationally 
+            efficient horizon discretization, to an integrated planning and control 
+            architecture. We first introduce a FR-MHE that enables real-time joint 
+            state/disturbance estimation under tight computational constraints. 
+            Building upon this estimator, we further tackle the resulting increase 
+            in computational complexity induced by integrated design via proposing a 
+            VDG strategy, which preserves long-horizon foresight while maintaining 
+            tractable online computation. Finally, we integrate FR-MHE and VDG into a 
+            unified sampling-based MPC framework, yielding the ITPC that jointly reasons 
+            about planning and control at the dynamics level with merely waypoints as 
+            its input. Together, these results establish a disturbance-aware, 
+            computationally efficient, and fully integrated navigation framework that 
+            departs from conventional hierarchical designs.
+          </p>
+        </div>
+      </div>
+
+      <!-- 右：插图 -->
+      <div class="column is-6">
+        <figure class="image">
+          <img src="static/images/ITPC.png" alt="ITPC Method Overview">
+          <figcaption class="has-text-centered" style="font-size: 1rem; margin-top: 0.5rem;">
+            Fig. 2: Overview of the proposed ITPC framework.
+          </figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Ground-effect-disturbed Hovering Experiments
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
@@ -199,7 +321,7 @@
   </div>
 </section>
 
-<!-- fan-induced wind experiments -->
+
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
@@ -262,72 +384,232 @@
   width: 100%;
   border-radius: 8px;
 }
-</style>
+</style> -->
 
 <!-- Results section -->
+<hr class="section-divider">
 <section class="hero is-small">
-  <div class="hero-body">
+  <div class="container is-fullhd">
     <div class="container">
+    <h2 class="title is-2 has-text-centered">Simulation Experiments</h2> 
+      <div id="results-carousel-frmhe" class="carousel results-carousel">
 
-      <!-- Common big title -->
-      <h1 class="title is-2">Results</h1>
-      <p class="content">
-          The comparative quantitative results clearly demonstrate the superior performance of the proposed PRED-MPPI in term of computation and tracking performance, through leveraging disturbance preview technique and VDG strategy.
-      </p>
-      <!-- Part 1 -->
-      <h2 class="title is-4 has-text-centered">Simulations</h2>
-      <div id="results-carousel-1" class="carousel results-carousel">
-        <div class="item">
-          <img src="static/images/VDG_valid.png" alt="MY ALT TEXT"/>
-          <h2 class="subtitle has-text-centered">
-            Average time consumption shows that MPPI leveraging VDG reduces computation time by over 30% thanks to the reduction on the number of sampled control inputs.
-          </h2>
+      <!-- ================= Part 1 ================= -->
+      <div class="item">
+
+        <h2 class="title is-4 has-text-centered"
+            style="font-size: 1.6rem; margin-bottom: 2rem;">
+          <strong>Q1:</strong> Can the proposed FR-MHE achieve accurate joint state and disturbance estimation 
+          while maintaining real-time computational performance and robustness?
+        </h2>
+
+        <div class="columns is-vcentered">
+
+          <div class="column is-6">
+            <figure class="image">
+              <img src="static/images/hover_yz.png" alt="Y-Z planes">
+            </figure>
+          </div>
+
+          <div class="column is-6">
+            <figure class="image">
+              <img src="static/images/hover_xy.png" alt="X-Y planes">
+            </figure>
+          </div>
+
         </div>
-        <div class="item">
-          <img src="static/images/Statistic_Sim.png" alt="MY ALT TEXT"/>
-          <h2 class="subtitle has-text-centered">
-            Box plots of RMSE for three typical scenarios. This improvement indicates that integrating VDG in MPPI could plummet the variance of tracking error, stemming from the reduced stochastic noise due to fewer sampled inputs.
-          </h2>
-        </div>
+
+        <p class="has-text-centered"
+          style="font-size: 1.3rem; line-height: 1.5; margin-top: 0.75rem;">
+          Fig. 3: Hovering experiment results in the Y–Z and X–Y planes.
+        </p>
+
       </div>
 
-      <!-- Part 2 -->
-      <h2 class="title is-4 has-text-centered">Ground-effect-disturbed Hovering Experiments</h2>
-      <div id="results-carousel-2" class="carousel results-carousel">
-        <div class="item">
-          <img src="static/images/DisGEF.png" alt="MY ALT TEXT"/>
-          <h2 class="subtitle has-text-centered">
-            Violin plots represent the distance to (0,0) in X-Y plane of the baseline controllers W/WO VDG strategy, demonstrating the VDG strategy is able to reduce both the mean and variance of the X-Y displacement distribution.
-          </h2>
+      <!-- ================= Part 2 ================= -->
+      <div class="item">
+        <h2 class="title is-4 has-text-centered"
+            style="font-size: 1.6rem; margin-bottom: 2rem;">
+          <strong>Q1:</strong> Can the proposed FR-MHE achieve accurate joint state and disturbance estimation 
+          while maintaining real-time computational performance and robustness?
+        </h2>
+
+        <div class="columns is-vcentered">
+
+          <div class="column is-6">
+            <figure class="image">
+              <img src="static/images/time_RMHE.png" alt="RMHE computation time">
+            </figure>
+          </div>
+
+          <div class="column is-6">
+            <figure class="image">
+              <img src="static/images/time_FRMHE.png" alt="FR-MHE computation time">
+            </figure>
+          </div>
+
         </div>
-        <div class="item">
-          <img src="static/images/AltitudeGEF.png" alt="MY ALT TEXT"/>
-          <h2 class="subtitle has-text-centered">
-             Disturbance-unaware controllers (e.g., geometry PD, MPPI, and MPPI+VDG) fail to maintain the target altitude at pz = 0.5m due to ground effect and input uncertainties, whereas the disturbance-aware controllers (e.g., DA-MPPI, DA-MPPI+VDG, PRED-MPPI) successfully achieve the target.
-          </h2>
-        </div>
+
+        <p class="has-text-centered"
+          style="font-size: 1.3rem; line-height: 1.5; margin-top: 0.75rem;">
+          Fig. 4: Computation time comparison of RMHE, FR-MHE, and REKF.
+          Box height denotes the inter-quartile range (IQR), illustrating the real-time
+          efficiency of the proposed FR-MHE.
+        </p>
       </div>
+    </div>
+
+  
 
       <!-- Part 3 -->
-      <h2 class="title is-4 has-text-centered">Fan-induced Wind Experiments</h2>
+      <h2 class="title is-4 has-text-centered">
+        <strong>Q2:</strong> Can the ITPC framework remain computationally efficient under 
+        disturbance-augmented dynamics and extended prediction horizons</h2>
       <div id="results-carousel-3" class="carousel results-carousel">
         <div class="item">
-          <img src="static/images/Circle2D.png" alt="MY ALT TEXT"/>
-          <h2 class="subtitle has-text-centered">
-            Comparative circular trajectory tracking results in X-Y plane under fan-induced time-varying wind disturbances and input uncertainties.
+          <img src="static/images/devices.png" alt="DEVICES TESTED"
+          style="
+              max-height: 560px;
+              width: auto;
+              max-width: 100%;
+              margin: auto;
+              display: block;
+            "/>
+          <h2 class="subtitle has-text-centered"
+          style="font-size: 1.3rem; line-height: 1.5; margin-top: 0.75rem;">
+            Fig. 4: Platforms used for algorithm evaluation span a wide range 
+            of budgets and CPU core configurations
           </h2>
         </div>
         <div class="item">
-          <img src="static/images/Circle3D.png" alt="MY ALT TEXT"/>
-          <h2 class="subtitle has-text-centered">
-            Comparative circular trajectory tracking results of 6 controller under fan-induced unknown time-varying wind and input uncertainties.
-          </h2>
+          <img src="static/images/table_compute.png" alt="MY ALT TEXT"         
+              style="
+              max-height: 460px;
+              width: auto;
+              max-width: 100%;
+              margin: auto;
+              display: block;
+            "/>
+
         </div>
       </div>
+
+       <div id="results-carousel-frmhe" class="carousel results-carousel">
+
+        <div class="item">
+
+          <h2 class="title is-4 has-text-centered"
+              style="font-size: 1.6rem; margin-bottom: 2rem;">
+            <strong>Q3:</strong> To what extent does ITPC outperform conventional hierarchical
+            navigation pipelines under non-negligible uncertainties, and can it actively exploit 
+            disturbances through integrated design?
+          </h2>
+
+          <div class="columns is-vcentered is-multiline">
+
+            <div class="column is-12">
+              <figure class="image">
+                <img src="static/images/mini-nowind.png" alt="Baseline no wind"
+                    style="max-height: 600px; width: auto; margin: auto; display: block;">
+              </figure>
+            </div>
+
+            <div class="column is-12">
+              <figure class="image">
+                <img src="static/images/ITPC-nowind.png" alt="ITPC no wind"
+                    style="max-height: 600px; width: auto; margin: auto; display: block;">
+              </figure>
+            </div>
+
+          </div>
+
+          <p class="has-text-centered"
+            style="font-size: 1.3rem; line-height: 1.5; margin-top: 0.75rem;">
+            Fig. 6:<strong> No wind:</strong> Comparison between baseline hierarchical design 
+            (Case ii, upper) and the proposed ITPC (Integrated design, lower).
+          </p>
+
+        </div>
+
+
+       <div class="item">
+
+        <h2 class="title is-4 has-text-centered"
+            style="font-size: 1.6rem; margin-bottom: 2rem;">
+          <strong>Q3:</strong> To what extent does ITPC outperform conventional hierarchical
+          navigation pipelines under non-negligible uncertainties, and can it actively exploit 
+          disturbances through integrated design?
+        </h2>
+
+        <div class="columns is-vcentered is-multiline">
+
+          <div class="column is-12">
+            <figure class="image">
+              <img src="static/images/mini-wind.png" alt="Baseline wind"
+                  style="max-height: 600px; width: auto; margin: auto; display: block;">
+            </figure>
+          </div>
+
+          <div class="column is-12">
+            <figure class="image">
+              <img src="static/images/ITPC-wind.png" alt="ITPC wind"
+                  style="max-height: 600px; width: auto; margin: auto; display: block;">
+            </figure>
+          </div>
+
+        </div>
+
+        <p class="has-text-centered"
+          style="font-size: 1.3rem; line-height: 1.5; margin-top: 0.75rem;">
+          Fig. 6:<strong> Wind:</strong> Comparison between baseline hierarchical design 
+          (Case ii, upper) and the proposed ITPC (Integrated design, lower). under 3–4 m/s wind gusts.
+        </p>
+
+      </div>
+
+
+        <div class="item">
+          <h2 class="title is-4 has-text-centered"
+              style="font-size: 1.6rem; margin-bottom: 2rem;">
+            <strong>Q3:</strong> To what extent does ITPC outperform conventional hierarchical
+             navigation pipelines under non-negligible uncertainties, can it actively exploit 
+             disturbances through integrated design?
+          </h2>
+
+          <div class="columns is-vcentered">
+
+            <div class="column is-12">
+              <figure class="image">
+                <img src="static/images/ITPC-nc.png" alt="RMHE computation time">
+              </figure>
+            </div>
+
+          </div>
+
+          <p class="has-text-centered"
+            style="font-size: 1.3rem; line-height: 1.5; margin-top: 0.75rem;">
+            Fig. 6:<strong> Wind:</strong>  ITPC without velocity constraint.
+          </p>
+        </div>
+
+      </div>
+
 
     </div>
   </div>
 </section>
+
+<!-- Results section -->
+<hr class="section-divider">
+<section class="hero is-small">
+  <div class="container is-fullhd">
+    <div class="container">
+    <h2 class="title is-2 has-text-centered">Real-world Experiments</h2> 
+
+    </div>
+  </div>
+</section>
+
 <!-- End Results section -->
 <style>
 .carousel img {
@@ -340,12 +622,22 @@
 </style>
 
 
-
+<hr class="section-divider">
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code> </code></pre>
+      <pre><code> 
+        @article{zhang2026Fast,
+          title={Fast Integrated Planning and Control under Non-negligible Uncertainties},
+          author={Haodi Zhang, Jiaheng Lu, Jinya Su, Shihua Li and Wen-Hua Chen},
+          journal={arxiv},
+          year={2026},
+          volume={1},
+          number={1},
+          pages={1-10},
+        }
+      </code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
