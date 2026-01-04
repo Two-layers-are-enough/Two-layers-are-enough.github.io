@@ -548,9 +548,26 @@
              style="display:block;margin:auto;max-width:100%;">
       </div>
     </div>
-
     <p class="has-text-left"
       style="font-size: 1.6rem; line-height: 1.5; margin-top: 0.75rem;">
+      Under <strong>nominal conditions</strong>, the hierarchical pipeline with minimum-snap
+      planning (case (ii)) achieves the optimal performance due to the time-parameterized global 
+      trajectories when disturbances are mild. In contrast, the fixed-velocity baseline
+      (case (i)) exhibits a very low success rate and is therefore
+      omitted from further quantitative discussion. This failure is
+      primarily caused by the aggressive safety radius, which pre-
+      vents the controller from recovering once the system deviates
+      from the nominal path.
+    </p>
+    <p class="has-text-left"
+      style="font-size: 1.6rem; line-height: 1.5; margin-top: 0.75rem;">
+      When <strong>wind disturbances</strong> are introduced, the limitations of hierarchical
+      designs become evident. In contrast, the proposed ITPC maintains a
+      90% success rate under the same conditions, despite only one trial failing to
+      a local minimum stuck case due to the sampling nature of MPPI algorithm, as depicted in Fig. 7.
+    </p>
+    <p class="has-text-left"
+      style="font-size: 1.6rem; line-height: 1.5; margin-top: 0.75rem; margin-bottom: 1rem;">
     To further examine the potential of the proposed integrated
     planning and control, we <strong>remove the velocity constraint</strong> in
     ITPC. As shown in Fig. 8, the system achieves smoother
@@ -561,6 +578,15 @@
     level optimization can unlock additional performance gains,
     reinforcing the benefits of the proposed integration paradigm.
     </p>
+    <div class="item">
+      <video autoplay controls muted loop width="100%">
+        <source src="static/videos/simulation.mp4" type="video/mp4">
+      </video>
+      <p class="has-text-centered" 
+        style="font-size: 1.6rem; line-height: 1.5; margin-top: 0.75rem;">
+        Simulation Video
+      </p>
+    </div>
   </div>
 </section>
 
@@ -593,7 +619,7 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code> 
-        @article{zhang2026Fast,
+        <!-- @article{zhang2026Fast,
           title={Fast Integrated Planning and Control under Non-negligible Uncertainties},
           author={Haodi Zhang, Jiaheng Lu, Jinya Su, Shihua Li and Wen-Hua Chen},
           journal={arxiv},
@@ -601,7 +627,7 @@
           volume={1},
           number={1},
           pages={1-10},
-        }
+        } -->
       </code></pre>
     </div>
 </section>
