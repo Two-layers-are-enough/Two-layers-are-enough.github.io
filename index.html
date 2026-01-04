@@ -56,7 +56,7 @@
 
   .paper-caption {
     margin-top: 0.3rem;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     line-height: 1.7;
     text-align: left;
     color: #000;
@@ -180,7 +180,7 @@
       <!-- Abstract (Left) -->
       <div class="column is-8">
         <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified" style="font-size: 1.2rem; line-height: 1.65;">
+        <div class="content has-text-justified" style="font-size: 1.4rem; line-height: 1.65;">
           <p>
             Hierarchical navigation systems typically rely on low-level controllers to compensate 
             for disturbances or modeling uncertainties, while planning decisions are made using simplified 
@@ -204,7 +204,7 @@
       <!-- Contributions (Right) -->
       <div class="column is-4">
         <h2 class="title is-3">Contributions</h2>
-        <div class="content" style="font-size: 1.2rem; line-height: 1.65;">
+        <div class="content" style="font-size: 1.4rem; line-height: 1.65;">
           <ol>
             <li>
               <strong>Disturbance-aware integrated planning and control.</strong>
@@ -239,7 +239,7 @@
       <!-- 左：文字 -->
       <div class="column is-6">
         <div class="content has-text-justified">
-          <p style="font-size: 1.2rem; line-height: 1.6;">
+          <p style="font-size: 1.4rem; line-height: 1.6;">
             This section presents the proposed ITPC. Rather than introducing independent 
             algorithmic components, the results are organized to reflect a coherent 
             progression from disturbance-aware state estimation, through computationally 
@@ -263,7 +263,7 @@
       <div class="column is-6">
         <figure class="image">
           <img src="static/images/ITPC.png" alt="ITPC Method Overview">
-          <figcaption class="has-text-centered" style="font-size: 1rem; margin-top: 0.5rem;">
+          <figcaption class="has-text-centered" style="font-size: 1.2rem; margin-top: 0.5rem;">
             Fig. 2: Overview of the proposed ITPC framework.
           </figcaption>
         </figure>
@@ -390,212 +390,177 @@
 <hr class="section-divider">
 <section class="hero is-small">
   <div class="container is-fullhd">
-    <div class="container">
-    <h2 class="title is-2 has-text-centered">Simulation Experiments</h2> 
-      <div id="results-carousel-frmhe" class="carousel results-carousel">
 
-      <!-- ================= Part 1 ================= -->
+    <!-- Title -->
+    <h2 class="title is-2 has-text-centered">Simulation Experiments</h2>
+
+    <!-- Intro text -->
+    <p class="has-text-left"
+       style="font-size: 1.6rem; line-height: 1.5; margin-bottom: 2.5rem;">
+      We present a comprehensive comparison study conducted in a high-fidelity
+      Gazebo environment to systematically validate the proposed ITPC framework.
+      The evaluation is structured around the following three research questions.
+    </p>
+
+    <!-- ================= Q1 ================= -->
+    <h2 class="title is-4 has-text-centered"
+        style="font-size: 1.6rem; margin-bottom: 2rem;">
+      <strong>Q1:</strong> Can the proposed FR-MHE achieve accurate joint state and
+      disturbance estimation while maintaining real-time computational performance
+      and robustness?
+    </h2>
+
+    <div class="carousel results-carousel">
+
+      <!-- Q1 – Fig 3 -->
       <div class="item">
-
-        <h2 class="title is-4 has-text-centered"
-            style="font-size: 1.6rem; margin-bottom: 2rem;">
-          <strong>Q1:</strong> Can the proposed FR-MHE achieve accurate joint state and disturbance estimation 
-          while maintaining real-time computational performance and robustness?
-        </h2>
-
         <div class="columns is-vcentered">
-
           <div class="column is-6">
-            <figure class="image">
-              <img src="static/images/hover_yz.png" alt="Y-Z planes">
-            </figure>
+            <img src="static/images/hover_yz.png"
+                 style="display:block;margin:auto;max-width:100%;">
           </div>
-
           <div class="column is-6">
-            <figure class="image">
-              <img src="static/images/hover_xy.png" alt="X-Y planes">
-            </figure>
+            <img src="static/images/hover_xy.png"
+                 style="display:block;margin:auto;max-width:100%;">
           </div>
-
         </div>
 
         <p class="has-text-centered"
-          style="font-size: 1.3rem; line-height: 1.5; margin-top: 0.75rem;">
+           style="font-size:1.3rem;margin-top:1rem;">
           Fig. 3: Hovering experiment results in the Y–Z and X–Y planes.
         </p>
-
       </div>
 
-      <!-- ================= Part 2 ================= -->
+      <!-- Q1 – Fig 4 -->
       <div class="item">
-        <h2 class="title is-4 has-text-centered"
-            style="font-size: 1.6rem; margin-bottom: 2rem;">
-          <strong>Q1:</strong> Can the proposed FR-MHE achieve accurate joint state and disturbance estimation 
-          while maintaining real-time computational performance and robustness?
-        </h2>
-
         <div class="columns is-vcentered">
-
           <div class="column is-6">
-            <figure class="image">
-              <img src="static/images/time_RMHE.png" alt="RMHE computation time">
-            </figure>
+            <img src="static/images/time_RMHE.png"
+                 style="display:block;margin:auto;max-width:100%;">
           </div>
-
           <div class="column is-6">
-            <figure class="image">
-              <img src="static/images/time_FRMHE.png" alt="FR-MHE computation time">
-            </figure>
+            <img src="static/images/time_FRMHE.png"
+                 style="display:block;margin:auto;max-width:100%;">
           </div>
-
         </div>
 
         <p class="has-text-centered"
-          style="font-size: 1.3rem; line-height: 1.5; margin-top: 0.75rem;">
+           style="font-size:1.3rem;margin-top:1rem;">
           Fig. 4: Computation time comparison of RMHE, FR-MHE, and REKF.
-          Box height denotes the inter-quartile range (IQR), illustrating the real-time
-          efficiency of the proposed FR-MHE.
+          Box height denotes the inter-quartile range (IQR).
         </p>
       </div>
+
     </div>
 
-  
+    <!-- ================= Q2 ================= -->
+    <h2 class="title is-4 has-text-centered"
+        style="font-size: 1.6rem; margin: 3rem 0 2rem;">
+      <strong>Q2:</strong> Can the ITPC framework remain computationally efficient
+      under disturbance-augmented dynamics and extended prediction horizons?
+    </h2>
 
-      <!-- Part 3 -->
-      <h2 class="title is-4 has-text-centered">
-        <strong>Q2:</strong> Can the ITPC framework remain computationally efficient under 
-        disturbance-augmented dynamics and extended prediction horizons</h2>
-      <div id="results-carousel-3" class="carousel results-carousel">
-        <div class="item">
-          <img src="static/images/devices.png" alt="DEVICES TESTED"
-          style="
-              max-height: 560px;
-              width: auto;
-              max-width: 100%;
-              margin: auto;
-              display: block;
-            "/>
-          <h2 class="subtitle has-text-centered"
-          style="font-size: 1.3rem; line-height: 1.5; margin-top: 0.75rem;">
-            Fig. 4: Platforms used for algorithm evaluation span a wide range 
-            of budgets and CPU core configurations
-          </h2>
-        </div>
-        <div class="item">
-          <img src="static/images/table_compute.png" alt="MY ALT TEXT"         
-              style="
-              max-height: 460px;
-              width: auto;
-              max-width: 100%;
-              margin: auto;
-              display: block;
-            "/>
+    <div class="carousel results-carousel">
 
-        </div>
+      <div class="item">
+        <img src="static/images/devices.png"
+             style="display:block;margin:auto;max-height:560px;width:auto;">
+        <p class="has-text-centered"
+           style="font-size:1.3rem;margin-top:1rem;">
+          Fig. 5: Platforms used for algorithm evaluation span a wide range of
+          budgets and CPU core configurations.
+        </p>
       </div>
 
-       <div id="results-carousel-frmhe" class="carousel results-carousel">
+      <div class="item">
+        <img src="static/images/table_compute.png"
+             style="display:block;margin:auto;max-height:460px;width:auto;">
+      </div>
 
-        <div class="item">
+    </div>
 
-          <h2 class="title is-4 has-text-centered"
-              style="font-size: 1.6rem; margin-bottom: 2rem;">
-            <strong>Q3:</strong> To what extent does ITPC outperform conventional hierarchical
-            navigation pipelines under non-negligible uncertainties, and can it actively exploit 
-            disturbances through integrated design?
-          </h2>
+    <!-- ================= Q3 ================= -->
+    <h2 class="title is-4 has-text-centered"
+        style="font-size: 1.6rem; margin: 3rem 0 2rem;">
+      <strong>Q3:</strong> To what extent does ITPC outperform conventional
+      hierarchical navigation pipelines under non-negligible uncertainties,
+      and can it actively exploit disturbances through integrated design?
+    </h2>
 
-          <div class="columns is-vcentered is-multiline">
+    <div class="carousel results-carousel">
 
-            <div class="column is-12">
-              <figure class="image">
-                <img src="static/images/mini-nowind.png" alt="Baseline no wind"
-                    style="max-height: 600px; width: auto; margin: auto; display: block;">
-              </figure>
-            </div>
-
-            <div class="column is-12">
-              <figure class="image">
-                <img src="static/images/ITPC-nowind.png" alt="ITPC no wind"
-                    style="max-height: 600px; width: auto; margin: auto; display: block;">
-              </figure>
-            </div>
-
-          </div>
-
-          <p class="has-text-centered"
-            style="font-size: 1.3rem; line-height: 1.5; margin-top: 0.75rem;">
-            Fig. 6:<strong> No wind:</strong> Comparison between baseline hierarchical design 
-            (Case ii, upper) and the proposed ITPC (Integrated design, lower).
-          </p>
-
-        </div>
-
-
-       <div class="item">
-
-        <h2 class="title is-4 has-text-centered"
-            style="font-size: 1.6rem; margin-bottom: 2rem;">
-          <strong>Q3:</strong> To what extent does ITPC outperform conventional hierarchical
-          navigation pipelines under non-negligible uncertainties, and can it actively exploit 
-          disturbances through integrated design?
-        </h2>
-
-        <div class="columns is-vcentered is-multiline">
-
-          <div class="column is-12">
-            <figure class="image">
-              <img src="static/images/mini-wind.png" alt="Baseline wind"
-                  style="max-height: 600px; width: auto; margin: auto; display: block;">
-            </figure>
-          </div>
-
-          <div class="column is-12">
-            <figure class="image">
-              <img src="static/images/ITPC-wind.png" alt="ITPC wind"
-                  style="max-height: 600px; width: auto; margin: auto; display: block;">
-            </figure>
-          </div>
-
-        </div>
+      <!-- No wind -->
+      <div class="item">
+        <img src="static/images/mini-nowind.png"
+             style="display:block;margin:auto;max-height:600px;">
+        <img src="static/images/ITPC-nowind.png"
+             style="display:block;margin:1.5rem auto 0;max-height:600px;">
 
         <p class="has-text-centered"
-          style="font-size: 1.3rem; line-height: 1.5; margin-top: 0.75rem;">
-          Fig. 6:<strong> Wind:</strong> Comparison between baseline hierarchical design 
-          (Case ii, upper) and the proposed ITPC (Integrated design, lower). under 3–4 m/s wind gusts.
+           style="font-size:1.3rem;margin-top:1rem;">
+          Fig. 6: <strong>No wind.</strong> Baseline hierarchical pipeline (upper)
+          vs. proposed ITPC (lower).
         </p>
-
       </div>
 
+      <!-- Wind -->
+      <div class="item">
+        <img src="static/images/mini-wind.png"
+             style="display:block;margin:auto;max-height:600px;">
+        <img src="static/images/ITPC-wind.png"
+             style="display:block;margin:1.5rem auto 0;max-height:600px;">
 
-        <div class="item">
-          <h2 class="title is-4 has-text-centered"
-              style="font-size: 1.6rem; margin-bottom: 2rem;">
-            <strong>Q3:</strong> To what extent does ITPC outperform conventional hierarchical
-             navigation pipelines under non-negligible uncertainties, can it actively exploit 
-             disturbances through integrated design?
-          </h2>
-
-          <div class="columns is-vcentered">
-
-            <div class="column is-12">
-              <figure class="image">
-                <img src="static/images/ITPC-nc.png" alt="RMHE computation time">
-              </figure>
-            </div>
-
-          </div>
-
-          <p class="has-text-centered"
-            style="font-size: 1.3rem; line-height: 1.5; margin-top: 0.75rem;">
-            Fig. 6:<strong> Wind:</strong>  ITPC without velocity constraint.
-          </p>
-        </div>
-
+        <p class="has-text-centered"
+           style="font-size:1.3rem;margin-top:1rem;">
+          Fig. 7: <strong>Wind (3–4 m/s).</strong> Hierarchical pipeline vs. ITPC.
+        </p>
       </div>
 
+      <!-- No constraint -->
+      <div class="item">
+        <img src="static/images/ITPC-nc.png"
+             style="display:block;margin:auto;max-height:650px;">
+
+        <p class="has-text-centered"
+           style="font-size:1.3rem;margin-top:1rem;">
+          Fig. 8: ITPC without velocity constraint.
+        </p>
+      </div>
 
     </div>
+
+    <!-- Text + table -->
+    <p class="has-text-left"
+       style="font-size:1.6rem;line-height:1.5;margin-top:3rem;">
+      We consider three configurations. Note that in this comparison, log-MPPI
+      serves as both the local trajectory planner and the cascaded controller.
+    </p>
+
+    <ol style="font-size:1.5rem;line-height:1.6;margin-left:1.5rem;">
+      <li><strong>A*+MPPI:</strong> path planner + log-MPPI with fixed velocity.</li>
+      <li><strong>A*+miniS+MPPI:</strong> path planner + global trajectory planner + log-MPPI.</li>
+      <li><strong>A*+ITPC:</strong> path planner + proposed ITPC.</li>
+    </ol>
+
+    <div class="columns is-centered" style="margin-top:2rem;">
+      <div class="column is-7">
+        <img src="static/images/table_ITPC.png"
+             style="display:block;margin:auto;max-width:100%;">
+      </div>
+    </div>
+
+    <p class="has-text-left"
+      style="font-size: 1.6rem; line-height: 1.5; margin-top: 0.75rem;">
+    To further examine the potential of the proposed integrated
+    planning and control, we <strong>remove the velocity constraint</strong> in
+    ITPC. As shown in Fig. 8, the system achieves smoother
+    and more agile navigation, reaching a maximum speed of
+    5.26 m/s with a 100% success rate over ten trials. This
+    result demonstrates that eliminating rigid velocity prescriptions
+    and allowing planning decisions to emerge from dynamics-
+    level optimization can unlock additional performance gains,
+    reinforcing the benefits of the proposed integration paradigm.
+    </p>
   </div>
 </section>
 
